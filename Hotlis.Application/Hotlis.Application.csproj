@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hotlis.Domain\Hotlis.Domain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="erroror" Version="2.0.1" />
+    <PackageReference Include="fluentvalidation" Version="11.11.0" />
+    <PackageReference Include="fluentvalidation.aspnetcore" Version="11.3.0" />
+    <PackageReference Include="mapster" Version="7.4.0" />
+    <PackageReference Include="mediatr" Version="12.4.1" />
+    <PackageReference Include="Microsoft.extensions.logging" Version="9.0.0" />
+  </ItemGroup>
+</Project>

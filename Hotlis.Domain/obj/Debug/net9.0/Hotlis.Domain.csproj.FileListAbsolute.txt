@@ -1,0 +1,12 @@
+D:\projects\dotnet\Hotlis\Hotlis.Domain\bin\Debug\net9.0\Hotlis.Domain.deps.json
+D:\projects\dotnet\Hotlis\Hotlis.Domain\bin\Debug\net9.0\Hotlis.Domain.dll
+D:\projects\dotnet\Hotlis\Hotlis.Domain\bin\Debug\net9.0\Hotlis.Domain.pdb
+D:\projects\dotnet\Hotlis\Hotlis.Domain\obj\Debug\net9.0\Hotlis.Domain.csproj.AssemblyReference.cache
+D:\projects\dotnet\Hotlis\Hotlis.Domain\obj\Debug\net9.0\Hotlis.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\dotnet\Hotlis\Hotlis.Domain\obj\Debug\net9.0\Hotlis.Domain.AssemblyInfoInputs.cache
+D:\projects\dotnet\Hotlis\Hotlis.Domain\obj\Debug\net9.0\Hotlis.Domain.AssemblyInfo.cs
+D:\projects\dotnet\Hotlis\Hotlis.Domain\obj\Debug\net9.0\Hotlis.Domain.csproj.CoreCompileInputs.cache
+D:\projects\dotnet\Hotlis\Hotlis.Domain\obj\Debug\net9.0\Hotlis.Domain.dll
+D:\projects\dotnet\Hotlis\Hotlis.Domain\obj\Debug\net9.0\refint\Hotlis.Domain.dll
+D:\projects\dotnet\Hotlis\Hotlis.Domain\obj\Debug\net9.0\Hotlis.Domain.pdb
+D:\projects\dotnet\Hotlis\Hotlis.Domain\obj\Debug\net9.0\ref\Hotlis.Domain.dll

@@ -1,0 +1,15 @@
+D:\projects\dotnet\Hotlis\Hotlis.Application\bin\Debug\net9.0\Hotlis.Application.deps.json
+D:\projects\dotnet\Hotlis\Hotlis.Application\bin\Debug\net9.0\Hotlis.Application.dll
+D:\projects\dotnet\Hotlis\Hotlis.Application\bin\Debug\net9.0\Hotlis.Application.pdb
+D:\projects\dotnet\Hotlis\Hotlis.Application\obj\Debug\net9.0\Hotlis.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\dotnet\Hotlis\Hotlis.Application\obj\Debug\net9.0\Hotlis.Application.AssemblyInfoInputs.cache
+D:\projects\dotnet\Hotlis\Hotlis.Application\obj\Debug\net9.0\Hotlis.Application.AssemblyInfo.cs
+D:\projects\dotnet\Hotlis\Hotlis.Application\obj\Debug\net9.0\Hotlis.Application.csproj.CoreCompileInputs.cache
+D:\projects\dotnet\Hotlis\Hotlis.Application\obj\Debug\net9.0\Hotlis.Application.dll
+D:\projects\dotnet\Hotlis\Hotlis.Application\obj\Debug\net9.0\refint\Hotlis.Application.dll
+D:\projects\dotnet\Hotlis\Hotlis.Application\obj\Debug\net9.0\Hotlis.Application.pdb
+D:\projects\dotnet\Hotlis\Hotlis.Application\obj\Debug\net9.0\ref\Hotlis.Application.dll
+D:\projects\dotnet\Hotlis\Hotlis.Application\bin\Debug\net9.0\Hotlis.Domain.dll
+D:\projects\dotnet\Hotlis\Hotlis.Application\bin\Debug\net9.0\Hotlis.Domain.pdb
+D:\projects\dotnet\Hotlis\Hotlis.Application\obj\Debug\net9.0\Hotlis.Application.csproj.AssemblyReference.cache
+D:\projects\dotnet\Hotlis\Hotlis.Application\obj\Debug\net9.0\Hotlis.A.9D9C8349.Up2Date

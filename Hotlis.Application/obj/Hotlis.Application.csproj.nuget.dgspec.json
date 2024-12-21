@@ -1,0 +1,168 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\projects\\dotnet\\Hotlis\\Hotlis.Application\\Hotlis.Application.csproj": {}
+  },
+  "projects": {
+    "D:\\projects\\dotnet\\Hotlis\\Hotlis.Application\\Hotlis.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\dotnet\\Hotlis\\Hotlis.Application\\Hotlis.Application.csproj",
+        "projectName": "Hotlis.Application",
+        "projectPath": "D:\\projects\\dotnet\\Hotlis\\Hotlis.Application\\Hotlis.Application.csproj",
+        "packagesPath": "C:\\Users\\HomePC\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\dotnet\\Hotlis\\Hotlis.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HomePC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\nugetpackages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\projects\\dotnet\\Hotlis\\Hotlis.Domain\\Hotlis.Domain.csproj": {
+                "projectPath": "D:\\projects\\dotnet\\Hotlis\\Hotlis.Domain\\Hotlis.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.extensions.logging": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "erroror": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "fluentvalidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "fluentvalidation.aspnetcore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "mediatr": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\projects\\dotnet\\Hotlis\\Hotlis.Domain\\Hotlis.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\dotnet\\Hotlis\\Hotlis.Domain\\Hotlis.Domain.csproj",
+        "projectName": "Hotlis.Domain",
+        "projectPath": "D:\\projects\\dotnet\\Hotlis\\Hotlis.Domain\\Hotlis.Domain.csproj",
+        "packagesPath": "C:\\Users\\HomePC\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\dotnet\\Hotlis\\Hotlis.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HomePC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\nugetpackages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "ErrorOr": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
