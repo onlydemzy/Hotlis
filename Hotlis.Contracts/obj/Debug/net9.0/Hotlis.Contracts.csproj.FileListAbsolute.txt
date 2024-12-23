@@ -5,6 +5,7 @@ D:\projects\dotnet\Hotlis\Hotlis.Contracts\obj\Debug\net9.0\Hotlis.Contracts.Gen
 D:\projects\dotnet\Hotlis\Hotlis.Contracts\obj\Debug\net9.0\Hotlis.Contracts.AssemblyInfoInputs.cache
 D:\projects\dotnet\Hotlis\Hotlis.Contracts\obj\Debug\net9.0\Hotlis.Contracts.AssemblyInfo.cs
 D:\projects\dotnet\Hotlis\Hotlis.Contracts\obj\Debug\net9.0\Hotlis.Contracts.csproj.CoreCompileInputs.cache
+D:\projects\dotnet\Hotlis\Hotlis.Contracts\obj\Debug\net9.0\Hotlis.Contracts.sourcelink.json
 D:\projects\dotnet\Hotlis\Hotlis.Contracts\obj\Debug\net9.0\Hotlis.Contracts.dll
 D:\projects\dotnet\Hotlis\Hotlis.Contracts\obj\Debug\net9.0\refint\Hotlis.Contracts.dll
 D:\projects\dotnet\Hotlis\Hotlis.Contracts\obj\Debug\net9.0\Hotlis.Contracts.pdb

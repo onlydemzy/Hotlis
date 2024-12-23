@@ -8,10 +8,10 @@ public sealed class ServiceId : AggregateRootId<string>
     {
         Value=value;
     }
-    /*public static ServiceId CreateUnique()
+    public static ServiceId CreateUnique()
     {
-        return new ServiceId(Guid.NewGuid());
-    }*/
+        return new ServiceId(Guid.NewGuid().ToString());
+    }
     public static ServiceId Create(string value)
     {
         return new ServiceId(value);

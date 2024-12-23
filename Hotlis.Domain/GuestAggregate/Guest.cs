@@ -1,8 +1,9 @@
+using Hotlis.Domain.Entities.ValueObjects;
 using Hotlis.Domain.GuestAggragate.ValueObjects;
 using KS.Domain.Common.Models;
 
 namespace Hotlis.Domain.GuestAggragate;
-public sealed class Guest:AggregateRoot<GuestId,Guid>
+public sealed class Guest:AggregateRoot<GuestId,string>
 {
     public string Title{get;private set;}
     public string Lastname{get;private set;}
@@ -21,12 +22,13 @@ public sealed class Guest:AggregateRoot<GuestId,Guid>
     public string PhotoPath{get;private set;}
 
     #pragma warning disable
-    private Guest():base(default){}
+    private Guest():base(default,default){}
     #pragma warning restore
 
     private Guest(GuestId guestId,string title, string lastname,string othernames,string gender,
-        DateTime? dob, string phone,string email, string address,string country,
-        string state, string city,string idType,string idPath,string idNumber,string photoPath):base(guestId)
+        DateTime? dob, string phone,string email, string address,string country,string state, 
+        string city,string idType,string idPath,string idNumber,
+        string photoPath,TenantId tenantId):base(guestId,tenantId)
         {
             Title=title;
             Lastname=lastname;
@@ -46,11 +48,12 @@ public sealed class Guest:AggregateRoot<GuestId,Guid>
 
         }
 
-        public static Guest Create(string title, string lastname,string othernames,string gender,
-        DateTime? dob, string phone,string email, string address,string country,
-        string state, string city,string idType,string idPath,string idNumber,string photoPath)
-            =>new (GuestId.CreateUnique(),title,lastname,othernames,gender,dob,phone,email,
-            address,country,state,city,idType,idPath,idNumber,photoPath);
+        public static Guest Create(string guestId,string title, string lastname,string othernames,
+            string gender, DateTime? dob, string phone,string email, string address,
+            string country, string state, string city,string idType,string idPath,
+            string idNumber,string photoPath, TenantId tenantId)
+                =>new (GuestId.Create(guestId),title,lastname,othernames,gender,dob,phone,email,
+                address,country,state,city,idType,idPath,idNumber,photoPath,tenantId);
 
    
     

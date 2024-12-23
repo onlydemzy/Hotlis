@@ -9,7 +9,7 @@ public sealed class Tenant:Entity<TenantId>
     public string TenantCode { get; private set;}
     public string Email{get;private set;}
     public string Phone1{get;private set;} 
-    public string Phone2{get;private set;} 
+    public string? Phone2{get;private set;} 
     public string Address{get;private set;}
     public string City{get;private set;}
     public string State{get;private set;}
@@ -21,7 +21,7 @@ public sealed class Tenant:Entity<TenantId>
     private Tenant():base(default){}
     #pragma warning restore
 
-    private Tenant(TenantId tenantId, string name,string tenantCode,string email, string phone1, string phone2,
+    private Tenant(TenantId tenantId, string name,string tenantCode,string email, string phone1, string? phone2,
     string address, string city, string state, string country, string status):base(tenantId)
     {
         TenantId = tenantId;
@@ -37,8 +37,8 @@ public sealed class Tenant:Entity<TenantId>
         Status = status;
     }
 
-    public static Tenant Create(string name,string tenantCode,string email, string phone1, string phone2,
-    string address, string city, string state, string country, string status)
+    public static Tenant Create(string name,string tenantCode,string email, string phone1, string? phone2,
+    string address, string city, string state, string country, string status)            
     =>new(TenantId.CreateUnique(),name,tenantCode,email,phone1,phone2,address,city,state,country,status);
 
 }

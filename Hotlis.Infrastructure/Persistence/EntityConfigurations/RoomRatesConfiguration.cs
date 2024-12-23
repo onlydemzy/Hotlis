@@ -1,8 +1,9 @@
+using Hotlis.Domain.Entities.ValueObjects;
+using Hotlis.Domain.RoomCategoryAggragate.ValueObjects;
 using Hotlis.Domain.RoomRatesAggragate;
 using Hotlis.Domain.RoomRatesAggragate.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Hotlis.Infrastructure.Persistence.EntityConfigurations;
 public class RoomRatesConfiguration:IEntityTypeConfiguration<RoomRates>
@@ -16,11 +17,22 @@ public class RoomRatesConfiguration:IEntityTypeConfiguration<RoomRates>
         .HasMaxLength(60)
         .HasConversion(d=>d.Value,
         value=>RoomRatesId.Create(value));
+
+        builder.Property(s=>s.RoomCategoryId)
+        .HasConversion(d => d.Value,
+        value => RoomCategoryId.Create(value));
+
+
         builder.Property(x => x.Plan).HasMaxLength(20);
-        builder.OwnsOne(x=>x.Price, a=>
+        builder.OwnsOne(x=>x.Money, a=>
         {
             a.Property(x=>x.Currency).HasMaxLength(3).IsRequired();
             a.Property(x=>x.Amount).HasColumnType("decimal(18,2)");
         });
+
+        builder.Property(x => x.TenantId).HasColumnName("TenantId")
+        .HasMaxLength(10)
+        .HasConversion(id => id.Value,
+        value => TenantId.Create(value));
     }
 }

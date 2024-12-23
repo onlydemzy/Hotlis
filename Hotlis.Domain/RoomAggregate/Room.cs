@@ -1,4 +1,4 @@
-using Hotlis.Domain.BillAggragate.ValueObjects;
+using Hotlis.Domain.Entities.ValueObjects;
 using Hotlis.Domain.RoomAggragate.ValueObjects;
 using Hotlis.Domain.RoomCategoryAggragate.ValueObjects;
 using KS.Domain.Common.Models;
@@ -12,17 +12,19 @@ public sealed class Room:AggregateRoot<RoomId,string>
     public RoomCategoryId RoomCategoryId{get;private set;}
     
     #pragma warning disable
-    private Room():base(default){}
+    private Room():base(default,default){}
     #pragma warning restore
 
-    private Room(RoomId roomId,string roomNumber, string status,RoomCategoryId roomCategoryId):base(roomId)
+    private Room(RoomId roomId,string roomNumber, string status,RoomCategoryId roomCategoryId,TenantId tenantId)
+    :base(roomId,tenantId)
     {
        Status=status;
        RoomCategoryId=roomCategoryId;
        RoomNumber=roomNumber;
     }
-    public static Room Create(string roomId,string roomNumber,string status,RoomCategoryId roomCategoryId)
-    =>new(RoomId.Create(roomId),roomNumber,status,roomCategoryId);
+    public static Room Create(string roomId,string roomNumber,
+    string status,RoomCategoryId roomCategoryId,TenantId tenantId)
+    =>new(RoomId.Create(roomId),roomNumber,status,roomCategoryId,tenantId);
 
     public static void UpdateRoomStatus(Room room,string newStatus)=>room.Status=newStatus;
 

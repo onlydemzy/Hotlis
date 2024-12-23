@@ -1,18 +1,18 @@
 using KS.Domain.Common.Models;
 
 namespace Hotlis.Domain.GuestAggragate.ValueObjects;
-public sealed class GuestId : AggregateRootId<Guid>
+public sealed class GuestId : AggregateRootId<string>
 {
-    public override Guid Value{get;protected set;}
-    private GuestId(Guid value)
+    public override string Value{get;protected set;}
+    private GuestId(string value)
     {
         Value=value;
     }
-    public static GuestId CreateUnique()
+    /*public static GuestId CreateUnique()
     {
         return new GuestId(Guid.NewGuid());
-    }
-    public static GuestId Create(Guid value)
+    }*/
+    public static GuestId Create(string value)
     {
         return new GuestId(value);
     }

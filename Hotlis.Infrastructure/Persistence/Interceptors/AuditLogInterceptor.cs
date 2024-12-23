@@ -1,17 +1,19 @@
 using System.Text.Json;
 using Hotlis.Application.Common.Interfaces;
+using Hotlis.Domain.Entities.UserManagement.Events;
 using Hotlis.Infrastructure.Persistence;
 using KS.Domain.Entities.UserManagement;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
 
 namespace Hotlis.Infrastructure.Interceptors;
-public class AuditLogInterceptor(IUserContextService _userContextService,AppDbContext _appDbContext):SaveChangesInterceptor
+public class AuditLogInterceptor(IUserContextService _userContextService,IDbContextFactory<AppDbContext> _dbContextFactory):SaveChangesInterceptor
 {
     private readonly IUserContextService userContextService=_userContextService;
-    private readonly AppDbContext appDbContext=_appDbContext;
+    private readonly IDbContextFactory<AppDbContext> dbContextFactory=_dbContextFactory;
     
     public override InterceptionResult<int> SavingChanges(DbContextEventData eventData, InterceptionResult<int> result)
     {
@@ -26,8 +28,8 @@ public class AuditLogInterceptor(IUserContextService _userContextService,AppDbCo
         .Where(e => e.State == EntityState.Added || e.State == EntityState.Modified || e.State == EntityState.Deleted)
             .Select(e => CreateAuditLog(e))
             .ToList();
+        SaveAuditLogs(auditEntries);
         
-        appDbContext.AuditLog.AddRange(auditEntries);
         return base.SavingChanges(eventData,result);
     }
     public async override ValueTask<InterceptionResult<int>> SavingChangesAsync(DbContextEventData eventData, InterceptionResult<int> result, CancellationToken cancellationToken = default(CancellationToken))
@@ -44,9 +46,7 @@ public class AuditLogInterceptor(IUserContextService _userContextService,AppDbCo
         .Where(e => e.State == EntityState.Added || e.State == EntityState.Modified || e.State == EntityState.Deleted)
             .Select(e => CreateAuditLog(e))
             .ToList();
-        
-        appDbContext.AuditLog.AddRange(auditEntries);
-       
+        await SaveAuditLogsAsync(auditEntries, cancellationToken);
         return await base.SavingChangesAsync(eventData,result,cancellationToken);
     }
 
@@ -77,5 +77,17 @@ public class AuditLogInterceptor(IUserContextService _userContextService,AppDbCo
         }
         
         return auditLog;
+    }
+
+    private void SaveAuditLogs(List<AuditLog> auditLogs) 
+    { 
+        using var context = dbContextFactory.CreateDbContext(); 
+        context.AuditLog.AddRange(auditLogs); context.SaveChanges();
+     }
+    private async Task SaveAuditLogsAsync(List<AuditLog> auditLogs, CancellationToken cancellationToken) 
+    { 
+        await using var context = dbContextFactory.CreateDbContext(); 
+        context.AuditLog.AddRange(auditLogs); 
+        await context.SaveChangesAsync(cancellationToken); 
     }
 }

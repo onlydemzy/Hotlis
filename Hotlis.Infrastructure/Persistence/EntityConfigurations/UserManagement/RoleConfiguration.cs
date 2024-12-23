@@ -11,10 +11,11 @@ namespace KS.Infrastructure.Persistence.EntityConfigurations.UserManagement;
         {
             builder.HasKey(ur => ur.Id);
             builder.Property(ur => ur.Id)
-            .ValueGeneratedNever()
+            .ValueGeneratedOnAdd()
             .HasColumnName("RoleId")
             .HasConversion(r=>r.Value,
             value=>RoleId.Create(value))
+            .HasDefaultValueSql("NEWID()")
             .ValueGeneratedOnAdd();
 
             builder.Property(ur => ur.RoleName).HasMaxLength(50);

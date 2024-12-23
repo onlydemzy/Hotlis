@@ -28,13 +28,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Hotlis.BlazorUI.07kyo627ce.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"07kyo627ce"},{"Name":"integrity","Value":"sha256-RJU6BjbPLy/EvF1yx55L6qsGyyKtngvgHs7W1UlhmRw="},{"Name":"label","Value":"_content/Hotlis.BlazorUI/Hotlis.BlazorUI.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5977"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022RJU6BjbPLy/EvF1yx55L6qsGyyKtngvgHs7W1UlhmRw=\u0022"},{"Name":"Last-Modified","Value":"Thu, 19 Dec 2024 13:07:27 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5977"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022RJU6BjbPLy/EvF1yx55L6qsGyyKtngvgHs7W1UlhmRw=\u0022"},{"Name":"Last-Modified","Value":"Sun, 22 Dec 2024 19:59:41 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Hotlis.BlazorUI/Hotlis.BlazorUI.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Hotlis.BlazorUI.07kyo627ce.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-RJU6BjbPLy/EvF1yx55L6qsGyyKtngvgHs7W1UlhmRw="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5977"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022RJU6BjbPLy/EvF1yx55L6qsGyyKtngvgHs7W1UlhmRw=\u0022"},{"Name":"Last-Modified","Value":"Thu, 19 Dec 2024 13:07:27 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5977"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022RJU6BjbPLy/EvF1yx55L6qsGyyKtngvgHs7W1UlhmRw=\u0022"},{"Name":"Last-Modified","Value":"Sun, 22 Dec 2024 19:59:41 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Hotlis.BlazorUI/lib/bootstrap/dist/css/bootstrap-grid.bqjiyaj88i.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css'))</AssetFile>

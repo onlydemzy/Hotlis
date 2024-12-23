@@ -5,9 +5,11 @@ using Hotlis.Infrastructure.Persistence;
 using Hotlis.Infrastructure.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 
 namespace Hotlis.Infrastructure;
 public static class DependencyInjection
@@ -29,6 +31,7 @@ public static class DependencyInjection
         services.AddDbContext<AppDbContext>(options=>
             options.UseSqlServer(connectionString)
         );
+        services.AddDbContextFactory<AppDbContext>(options=>options.UseSqlServer(connectionString),ServiceLifetime.Scoped);
         
         return services;
     }
@@ -38,6 +41,7 @@ public static class DependencyInjection
         services.AddScoped<IUserContextService, UserContextService>();
         services.AddScoped<AuditLogInterceptor>();
         services.AddScoped<PublishDomainEventsInterceptor>();
+        services.AddScoped<IDbContextFactory<AppDbContext>, DbContextFactory<AppDbContext>>();
         
         return services;
     }
@@ -46,17 +50,7 @@ public static class DependencyInjection
     {
         using var scope = host.Services.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        await AppDbContextSeed.SeedRoleAsync(context);
-        await AppDbContextSeed.SeedUserAsync(context);
-
-        /*
-       using (var scope = host.Services.CreateScope())
-        {
-            var context=scope.ServiceProvider.GetRequiredService<AppDbContext>();
-            await AppDbContextSeed.SeedRoleAsync(context);
-            await AppDbContextSeed.SeedUserAsync(context);
-        }
-        */
+        await AppDbContextSeed.SeedDataSync(context);
 
     }
     

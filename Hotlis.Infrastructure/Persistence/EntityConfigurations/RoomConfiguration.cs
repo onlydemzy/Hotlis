@@ -1,6 +1,8 @@
+using Hotlis.Domain.Entities.ValueObjects;
 using Hotlis.Domain.RoomAggragate;
 using Hotlis.Domain.RoomAggragate.ValueObjects;
 using Hotlis.Domain.RoomCategoryAggragate;
+using Hotlis.Domain.RoomCategoryAggragate.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -16,7 +18,15 @@ public class RoomConfiguration:IEntityTypeConfiguration<Room>
         .HasConversion(id=>id.Value,
         value=>RoomId.Create(value));
         
-        builder.HasOne<RoomCategory>().WithMany()
-            .HasForeignKey(x => x.RoomCategoryId);
+        builder.Property(a=>a.RoomNumber);
+        builder.Property(g => g.TenantId).HasColumnName("TenantId")
+        .HasConversion(id => id.Value, value => TenantId.Create(value))
+        .HasMaxLength(10);
+
+        builder.Property(s=>s.RoomCategoryId)
+        .HasConversion(s=>s.Value,id=>RoomCategoryId.Create(id))
+        .HasMaxLength(60)
+        .ValueGeneratedNever();
+          
     }
 }

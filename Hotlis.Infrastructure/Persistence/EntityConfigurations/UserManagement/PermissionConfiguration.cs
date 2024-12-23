@@ -16,6 +16,7 @@ namespace KS.Infrastructure.Persistence.EntityConfigurations.UserManagement
             value=>PermissionId.Create(value))
             .HasMaxLength(60)
             .HasColumnName("PermissionId")
+            .HasDefaultValueSql("NEWID()")
             .ValueGeneratedOnAdd();
 
            
